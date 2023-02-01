@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
     public float jumpForce = 10.0f;
     private Rigidbody rigidbody;
     private Vector3 direction;
-    private distanceToGround;
+    private float distanceToGround;
 
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
