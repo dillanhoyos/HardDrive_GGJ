@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public float speed = 10.0f;
-    public float jumpForce = 10.0f;
+    public float speed = 10.0f, jumpForce = 10.0f;
+    public Camera camera;
     private Rigidbody rigidbody;
     private Vector3 direction;
-    private float distanceToGround;
 
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
@@ -19,17 +18,19 @@ public class Player : MonoBehaviour {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        direction.Set(horizontal, 0, vertical);
+        direction = camera.transform.forward * vertical + camera.transform.right * horizontal;
+        direction.y = 0;
+        direction = direction.normalized;
+
         transform.position += direction * speed * Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
+        if (Input.GetKeyDown(KeyCode.Space) && Pies.IsGrounded) {
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-    }
 
-    bool IsGrounded() {
-        distanceToGround = GetComponent<Collider>().bounds.extents.y;
-        return Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 0.1f);
+        if (direction != Vector3.zero) {
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
     }
 
 }
