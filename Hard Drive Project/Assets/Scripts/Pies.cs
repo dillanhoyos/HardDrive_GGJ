@@ -10,7 +10,7 @@ public class Pies : MonoBehaviour {
 
     void LateUpdate() {
         transform.position=player.transform.position;
-        rotacion.Set(0f,0f,player.transform.eulerAngles.z);
+        rotacion.Set(0f,0f,-player.transform.eulerAngles.z);
         transform.eulerAngles = rotacion;
     }
 
