@@ -5,16 +5,13 @@ using UnityEngine;
 public class Pies : MonoBehaviour {
 
     public static bool IsGrounded;
-    private Vector3 rotacion;
     [SerializeField] GameObject player;
-
-    void Start() {
-        rotacion=Vector3.zero;
-    }
+    private Vector3 rotacion;
 
     void LateUpdate() {
         transform.position=player.transform.position;
-        transform.rotation=Quaternion.LookRotation(rotacion);
+        rotacion.Set(0f,0f,player.transform.eulerAngles.z);
+        transform.eulerAngles = rotacion;
     }
 
     void OnTriggerStay(Collider other) {
