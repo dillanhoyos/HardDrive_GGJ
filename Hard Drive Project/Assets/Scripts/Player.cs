@@ -7,11 +7,16 @@ public class Player : MonoBehaviour {
     public float speed = 10.0f, jumpForce = 10.0f;
     public Camera camera;
     private Rigidbody rigidbody;
-    private Vector3 direction;
+    private Vector3 direction, nuevaRotacion;
+    [SerializeField] private float rotacionZ;
+    [SerializeField] private bool seMueve;
 
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
         direction=Vector3.zero;
+        rotacionZ=0f;
+        nuevaRotacion=Vector3.zero;
+        seMueve=true;
     }
 
     void Update() {
@@ -22,14 +27,24 @@ public class Player : MonoBehaviour {
         direction.y = 0;
         direction = direction.normalized;
 
-        transform.position += direction * speed * Time.deltaTime;
+        Mover(direction * speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && Pies.IsGrounded) {
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if (direction != Vector3.zero) {
-            transform.rotation = Quaternion.LookRotation(direction);
+    }
+
+    private void Mover(Vector3 movimiento){
+        if(seMueve){
+            transform.position += movimiento;
+
+            nuevaRotacion.Set(0, transform.eulerAngles.y, rotacionZ);
+            transform.eulerAngles=nuevaRotacion;
+            
+            if (direction != Vector3.zero) {
+                transform.rotation = Quaternion.LookRotation(direction);
+            }
         }
     }
 

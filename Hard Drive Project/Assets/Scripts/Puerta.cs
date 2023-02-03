@@ -12,7 +12,6 @@ public class Puerta : MonoBehaviour {
         puerta2=false;
         puerta3=false;
         gravedadVolteada=false;
-        Debug.Log(Physics.gravity);
     }
 
     void OnTriggerEnter(Collider other) {
@@ -20,17 +19,17 @@ public class Puerta : MonoBehaviour {
             playerAnimator.SetTrigger("ActivarAnimacion");
             pisoAnimator.SetBool("desactivarCollider", true);
             puerta1=true;
-            Invoke("VoltearGravedad", 1.4f);
+            Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta2) {
             playerAnimator.SetTrigger("ActivarAnimacionP2");
             pisoAnimator.SetBool("desactivarCollider", true);
             puerta2=true;
-            Invoke("VoltearGravedad", 1.4f);
+            Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta3) {
             playerAnimator.SetTrigger("ActivarAnimacionP3");
             pisoAnimator.SetBool("desactivarCollider", true);
             puerta3=true;
-            Invoke("VoltearGravedad", 1.4f);
+            Invoke("VoltearGravedad", 1f);
         }
         Invoke("ResetearPuertas", 4f);
     }
@@ -44,7 +43,6 @@ public class Puerta : MonoBehaviour {
     void VoltearGravedad() {
         if(!gravedadVolteada) {
             Physics.gravity = -Physics.gravity;
-            Debug.Log(Physics.gravity);
             gravedadVolteada=true;
         }
     }
