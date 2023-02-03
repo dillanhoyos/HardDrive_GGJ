@@ -11,6 +11,7 @@ public class Button2Bang : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         pdPatch.SendBang("TriggerOn");
+        
 
     }
     void OnTriggerExit(Collider other)
