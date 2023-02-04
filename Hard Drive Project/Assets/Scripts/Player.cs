@@ -7,7 +7,7 @@ public class Player : MonoBehaviour {
     public float speed = 10.0f, jumpForce = 10.0f;
     public Camera camera;
     private Rigidbody rigidbody;
-    private Vector3 direction, nuevaRotacion;
+    private Vector3 direction, nuevaRotacion, vectorSalto;
     [SerializeField] private float rotacionZ;
     [SerializeField] private bool seMueve;
 
@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
         rotacionZ=0f;
         nuevaRotacion=Vector3.zero;
         seMueve=true;
+        vectorSalto=Vector3.up;
     }
 
     void Update() {
@@ -30,7 +31,12 @@ public class Player : MonoBehaviour {
         Mover(direction * speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && Pies.IsGrounded) {
-            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            if(!Puerta.gravedadVolteada){
+                rigidbody.AddForce(vectorSalto * jumpForce, ForceMode.Impulse);
+            } else {
+                rigidbody.AddForce(-vectorSalto * jumpForce, ForceMode.Impulse);
+            }
+                
         }
 
     }
