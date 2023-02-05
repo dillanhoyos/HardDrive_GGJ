@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: message
       value: Earth
       objectReference: {fileID: 0}
+    - target: {fileID: 160446398579585878, guid: 72c09fc42e227684db25f12abe0e6f32, type: 3}
+      propertyPath: message.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 160446398579585878, guid: 72c09fc42e227684db25f12abe0e6f32, type: 3}
+      propertyPath: message.Array.data[0]
+      value: Earth
+      objectReference: {fileID: 0}
     - target: {fileID: 160446399301762644, guid: 72c09fc42e227684db25f12abe0e6f32, type: 3}
       propertyPath: m_RootOrder
       value: 0

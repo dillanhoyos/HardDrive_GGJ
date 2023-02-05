@@ -7,7 +7,7 @@ public class Button2Bang : MonoBehaviour
     private LibPdInstance pdPatch;
    
     private GameObject[] SoundScape;
-    public string message;
+    public string[] message;
     public bool isSoundBoop = true;
     
 
@@ -29,7 +29,11 @@ public class Button2Bang : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        pdPatch.SendBang(message);
+      for(int i = 0; i < message.Length; i++)
+      {
+        pdPatch.SendBang(message[i]);
+      }
+        
         
 
     }

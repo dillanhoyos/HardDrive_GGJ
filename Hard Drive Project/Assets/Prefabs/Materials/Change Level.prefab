@@ -156,5 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264a4318148571f4a9f9e901086f5ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Changeplatform
+  message:
+  - Changeplatform
   isSoundBoop: 0

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4253623808630066072}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.7, y: 0.89000034, z: 2.9}
-  m_LocalScale: {x: 59.805862, y: 1, z: 7.248346}
+  m_LocalScale: {x: 59.805862, y: 1, z: 7.2483454}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4795975897064197881}
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264a4318148571f4a9f9e901086f5ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Changeplatform
+  message:
+  - Changeplatform
   isSoundBoop: 0
 --- !u!65 &6316989964388775121
 BoxCollider:

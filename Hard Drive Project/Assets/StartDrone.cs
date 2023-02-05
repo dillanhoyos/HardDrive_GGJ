@@ -15,18 +15,8 @@ public class StartDrone : MonoBehaviour
     }
     void Start()
     {
-           StartCoroutine(Sendbang());
     }
-     IEnumerator  Sendbang ()
-    {
-         
-
-        yield return new  WaitForSeconds(8f);
-        drone.SendBang("StartDrone");
-        drone.SendBang("MasterSwitch");
-        StartCoroutine(Sendbang());
-       
-    }
+     
 
     
 
