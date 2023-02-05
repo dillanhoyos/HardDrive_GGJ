@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public float speed = 10.0f, jumpForce = 10.0f;
+    private float horizontal, vertical;
     public Camera camera;
     private Rigidbody rigidbody;
     private Vector3 direction, nuevaRotacion, vectorSalto;
@@ -21,8 +22,8 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
 
         direction = camera.transform.forward * vertical + camera.transform.right * horizontal;
         direction.y = 0;
@@ -44,13 +45,13 @@ public class Player : MonoBehaviour {
     private void Mover(Vector3 movimiento){
         if(seMueve){
             transform.position += movimiento;
-
-            nuevaRotacion.Set(0, transform.eulerAngles.y, rotacionZ);
-            transform.eulerAngles=nuevaRotacion;
             
             if (direction != Vector3.zero) {
                 transform.rotation = Quaternion.LookRotation(direction);
             }
+
+            nuevaRotacion.Set(0, transform.eulerAngles.y, rotacionZ);
+            transform.eulerAngles=nuevaRotacion;
         }
     }
 
