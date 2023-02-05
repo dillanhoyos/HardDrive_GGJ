@@ -14,11 +14,23 @@ public class Pies : MonoBehaviour {
         transform.eulerAngles = rotacion;
     }
 
+    void OnTriggerEnter(Collider other) {
+        IsGrounded=true;
+    }
+
     void OnTriggerStay(Collider other) {
         IsGrounded=true;
     }
 
-    void OnTriggerExit(Collider other){
+    void OnCollisionStay(Collision other) {
+        IsGrounded=true;
+    }
+
+    void OnCollisionEnter(Collision other) {
+        IsGrounded=true;
+    }
+
+    void OnTriggerExit(Collider other) {
         IsGrounded=false;
     }
 }
