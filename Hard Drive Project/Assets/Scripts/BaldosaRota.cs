@@ -7,13 +7,13 @@ public class BaldosaRota : MonoBehaviour {
     Rigidbody baldosaRB;
 
     void Start(){
-        baldosaRB=GetComponent<Rigidbody>();
+        baldosaRB = this.GetComponent<Rigidbody>();
     }
 
     void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag=="Player") {
-            Invoke("ActivarCaida",6f);
-            Invoke("DestruirBaldosa",6f);
+            Invoke("ActivarCaida",3f);
+            Invoke("DestruirBaldosa",3f);
         }
     }
 

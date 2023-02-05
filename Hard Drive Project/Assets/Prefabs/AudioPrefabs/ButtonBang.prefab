@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264a4318148571f4a9f9e901086f5ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pdPatch: {fileID: 0}
-  message: 
+  message: []
+  isSoundBoop: 1
 --- !u!65 &1962271788821843971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 160446399442634659}
   - component: {fileID: 363985918773496870}
   - component: {fileID: 7740784168653677173}
+  - component: {fileID: 4945324541696067735}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -221,3 +222,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4945324541696067735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160446399442634663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de1682e3e266ed4eb9289780a45ec33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform player; 
+   
     public Vector3 Spaw;
 
 
@@ -12,9 +12,12 @@ public class Spawner : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        var c = col.gameObject.name;
        var d = col.gameObject.transform.position;
-        
-           d = Spaw;
+        if(c == "Soul")
+        {
+            d = Spaw;
+        }
         
     }
 
