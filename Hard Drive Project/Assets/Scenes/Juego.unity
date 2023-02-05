@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.46457815, g: 0.46659324, b: 0.4716981, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 656058fe318eb48558d21d66d1a79a2b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.06361822, g: 0.052069563, b: 0.056787517, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,8 +303,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159722351}
-  m_LocalRotation: {x: 0.25468516, y: 0.000000018602949, z: -0.0000000048994595, w: 0.967024}
-  m_LocalPosition: {x: 0, y: 6.66, z: -10}
+  m_LocalRotation: {x: 0.25468513, y: -0.000000018602947, z: 0.0000000048994577, w: 0.967024}
+  m_LocalPosition: {x: 20.6, y: 6.66, z: 147.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -523,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855840875827554516, guid: d79ea01aa60491d4d8d502814d4e7380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20.6
       objectReference: {fileID: 0}
     - target: {fileID: 8855840875827554516, guid: d79ea01aa60491d4d8d502814d4e7380, type: 3}
       propertyPath: m_LocalPosition.y
@@ -531,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855840875827554516, guid: d79ea01aa60491d4d8d502814d4e7380, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 157.4
       objectReference: {fileID: 0}
     - target: {fileID: 8855840875827554516, guid: d79ea01aa60491d4d8d502814d4e7380, type: 3}
       propertyPath: m_LocalRotation.w
@@ -895,7 +895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &662740354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1396,7 +1396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1067990193
 Animator:
   serializedVersion: 5
@@ -1756,7 +1756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227355905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: 2, z: 9.8}
+  m_LocalPosition: {x: 17.8, y: 71.5, z: 167.3}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2414,7 +2414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769940466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.84, y: 2, z: 35.8}
+  m_LocalPosition: {x: 20.1, y: 629, z: 169.7}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2683,7 +2683,7 @@ Camera:
   m_GameObject: {fileID: 1915583499}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -2724,8 +2724,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915583499}
-  m_LocalRotation: {x: 0.25468516, y: 0.000000018602949, z: -0.0000000048994595, w: 0.967024}
-  m_LocalPosition: {x: 0, y: 6.66, z: -10}
+  m_LocalRotation: {x: 0.25468513, y: -0.000000018602947, z: 0.0000000048994577, w: 0.967024}
+  m_LocalPosition: {x: 20.6, y: 6.66, z: 147.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2751,7 +2751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1932345641
 Animator:
   serializedVersion: 5

@@ -14,11 +14,8 @@ public class Spawner : MonoBehaviour
     {
         var c = col.gameObject.name;
        var d = col.gameObject.transform.position;
-        if(c == "Soul")
-        {
-            d = Spaw;
-        }
-        
+       d = Spaw;
+       
     }
 
 
