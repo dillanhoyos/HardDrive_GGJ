@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Puerta : MonoBehaviour {
     
-    [SerializeField] private Animator playerAnimator, pisoAnimator, cameraAnimator, mainCameraAnimator;
+    [SerializeField] private Animator playerAnimator, pisoAnimator, cameraAnimator;
     private bool puerta1, puerta2, puerta3;
     public static bool gravedadVolteada;
 
