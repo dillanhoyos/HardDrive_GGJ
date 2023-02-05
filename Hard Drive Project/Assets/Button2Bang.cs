@@ -4,14 +4,28 @@ using UnityEngine;
 
 public class Button2Bang : MonoBehaviour
 {
-   private LibPdInstance pdPatch;
+    private LibPdInstance pdPatch;
+   
+    private GameObject[] SoundScape;
     public string message;
+    public bool isSoundBoop = true;
+    
 
     // Start is called before the first frame update
 
     void Start()
     {
-      pdPatch =  transform.root.gameObject.GetComponent<LibPdInstance>();
+       SoundScape = GameObject.FindGameObjectsWithTag("SoundScape");
+        if(isSoundBoop)
+        {
+          pdPatch =  transform.root.gameObject.GetComponent<LibPdInstance>();
+        }
+        else 
+        {
+         
+          pdPatch = SoundScape[0].GetComponent<LibPdInstance>();
+        }
+         
     }
     void OnTriggerEnter(Collider other)
     {
