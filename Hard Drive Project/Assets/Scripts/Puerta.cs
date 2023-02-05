@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Puerta : MonoBehaviour {
     
-    [SerializeField] private Animator playerAnimator, pisoAnimator;
-    private bool puerta1, puerta2, puerta3, gravedadVolteada;
+    [SerializeField] private Animator playerAnimator, pisoAnimator, cameraAnimator;
+    private bool puerta1, puerta2, puerta3;
+    public static bool gravedadVolteada;
 
     void Start(){
         puerta1=false;
@@ -18,16 +19,19 @@ public class Puerta : MonoBehaviour {
         if(other.gameObject.tag=="Player" && !puerta1) {
             playerAnimator.SetTrigger("ActivarAnimacion");
             pisoAnimator.SetBool("desactivarCollider", true);
+            cameraAnimator.SetTrigger("RotarCamara");
             puerta1=true;
             Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta2) {
             playerAnimator.SetTrigger("ActivarAnimacionP2");
             pisoAnimator.SetBool("desactivarCollider", true);
+            cameraAnimator.SetTrigger("RotarCamara");
             puerta2=true;
             Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta3) {
             playerAnimator.SetTrigger("ActivarAnimacionP3");
             pisoAnimator.SetBool("desactivarCollider", true);
+            cameraAnimator.SetTrigger("RotarCamara");
             puerta3=true;
             Invoke("VoltearGravedad", 1f);
         }
