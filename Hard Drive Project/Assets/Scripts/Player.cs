@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    public float speed = 10.0f, jumpForce = 10.0f;
+    public float speed = 10.0f, jumpForce = 15.0f;
     private float horizontal, vertical;
     public Camera camera;
     private Rigidbody rigidbody;
