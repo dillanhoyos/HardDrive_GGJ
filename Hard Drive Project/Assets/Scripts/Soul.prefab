@@ -28,8 +28,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8855840875827554516}
+  m_Father: {fileID: 8855840875245291980}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &423666527
@@ -57,6 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b7a32feaf8b504996c718021f2e5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &8855840875245291981
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,9 +90,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 423666525}
   m_Father: {fileID: 8855840875827554516}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8855840875245291968
 MeshFilter:
@@ -111,6 +115,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -169,6 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 15
+  camera: {fileID: 0}
+  rotacionZ: 0
+  seMueve: 0
 --- !u!54 &8855840875245291971
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -211,8 +219,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.26, y: 1, z: 14.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 423666525}
   - {fileID: 8855840875245291980}
   m_Father: {fileID: 0}
   m_RootOrder: 0
