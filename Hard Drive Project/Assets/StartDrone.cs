@@ -15,14 +15,12 @@ public class StartDrone : MonoBehaviour
     }
     void Start()
     {
+        drone.SendBang("Reverse");
     }
      
+     void OnDisable()
+     {
+         drone.SendBang("Reverse");
+     }
 
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
