@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Puerta : MonoBehaviour {
     
@@ -8,6 +9,9 @@ public class Puerta : MonoBehaviour {
     private bool puerta1, puerta2, puerta3;
     public static bool gravedadVolteada;
     public Material Skybox;
+    public UnityEvent rotate;
+  
+
 
     void Start(){
         puerta1=false;
@@ -24,6 +28,8 @@ public class Puerta : MonoBehaviour {
             cameraAnimator.SetTrigger("RotarCamara");
             puerta1=true;
             RenderSettings.skybox = Skybox;
+            rotate.Invoke();
+           
             Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta2) {
             playerAnimator.SetTrigger("ActivarAnimacionP2");

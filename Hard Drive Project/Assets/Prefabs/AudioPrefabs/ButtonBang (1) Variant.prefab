@@ -131,5 +131,9 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.049999952
       objectReference: {fileID: 0}
+    - target: {fileID: 1962271788821843971, guid: 72c09fc42e227684db25f12abe0e6f32, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72c09fc42e227684db25f12abe0e6f32, type: 3}
