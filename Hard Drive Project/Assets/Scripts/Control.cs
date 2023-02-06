@@ -31,18 +31,6 @@ public class Control : MonoBehaviour {
 		SceneManager.LoadScene(3);
 	}
 
-	public void irAInstrucciones()
-	{
-		Time.timeScale = 1f;
-		SceneManager.LoadScene(4);
-	}
-
-	public void irANiveles()
-	{
-		Time.timeScale = 1f;
-		SceneManager.LoadScene(5);
-	}
-
 	public void salir()
 	{
 		Application.Quit();
