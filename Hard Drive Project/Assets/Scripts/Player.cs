@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class Player : MonoBehaviour {
-
+        
     public float speed = 10.0f, jumpForce = 15.0f;
     private float horizontal, vertical;
     public Camera camera;
@@ -11,6 +13,8 @@ public class Player : MonoBehaviour {
     private Vector3 direction, nuevaRotacion, vectorSalto;
     [SerializeField] private float rotacionZ;
     [SerializeField] private bool seMueve;
+   
+    public UnityEvent PlayJump = new UnityEvent();
 
     void Start() {
         rigidbody = GetComponent<Rigidbody>();
@@ -32,6 +36,7 @@ public class Player : MonoBehaviour {
         Mover(direction * speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.Space) && Pies.IsGrounded) {
+            PlayJump.Invoke();
             if(!Puerta.gravedadVolteada){
                 rigidbody.AddForce(vectorSalto * jumpForce, ForceMode.Impulse);
             } else {

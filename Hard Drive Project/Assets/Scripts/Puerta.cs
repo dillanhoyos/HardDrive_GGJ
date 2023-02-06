@@ -7,6 +7,7 @@ public class Puerta : MonoBehaviour {
     [SerializeField] private Animator playerAnimator, pisoAnimator, cameraAnimator;
     private bool puerta1, puerta2, puerta3;
     public static bool gravedadVolteada;
+    public Material Skybox;
 
     void Start(){
         puerta1=false;
@@ -17,10 +18,12 @@ public class Puerta : MonoBehaviour {
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag=="Player" && !puerta1) {
+
             playerAnimator.SetTrigger("ActivarAnimacion");
             pisoAnimator.SetBool("desactivarCollider", true);
             cameraAnimator.SetTrigger("RotarCamara");
             puerta1=true;
+            RenderSettings.skybox = Skybox;
             Invoke("VoltearGravedad", 1f);
         } if(other.gameObject.tag=="Player" && !puerta2) {
             playerAnimator.SetTrigger("ActivarAnimacionP2");

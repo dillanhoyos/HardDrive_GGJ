@@ -101,7 +101,7 @@ AudioSource:
   m_GameObject: {fileID: 8585820663780889086}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1791146956798464997, guid: 8e407b2deab26f14ba84708d5f08d1c6, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -201,9 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Saltos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 2ab57bd99601e7744af31d31634ee8ec, type: 3}
+  - {fileID: 8300000, guid: b34026ee42f7b28499d94e29aea82513, type: 3}
+  - {fileID: 8300000, guid: 8d340c97797c9b848ad16fd7c996a6e2, type: 3}
   Audio: {fileID: 276637033683181392}
 --- !u!1 &8855840875245291981
 GameObject:

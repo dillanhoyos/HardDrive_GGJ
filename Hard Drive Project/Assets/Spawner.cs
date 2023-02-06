@@ -6,15 +6,15 @@ public class Spawner : MonoBehaviour
 {
    
     public Vector3 Spaw;
+    public Transform Player;
 
 
 
 
     void OnTriggerEnter(Collider col)
     {
-        var c = col.gameObject.name;
-       var d = col.gameObject.transform.position;
-       d = Spaw;
+     
+       Player.position = Spaw;
        
     }
 
