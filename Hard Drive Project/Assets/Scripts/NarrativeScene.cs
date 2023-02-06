@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class NarrativeScene : MonoBehaviour
 {
 	public TMP_Text textoCargado;
-
 	public string nivelACargar;
 
 	private void Start()
@@ -23,7 +22,7 @@ public class NarrativeScene : MonoBehaviour
 		{
 			if (operacion.progress >= 0.9f)
 			{
-				textoCargado.text = "Presiona cualquier cosa para continuar";
+				textoCargado.text = "Press anything";
 				if (Input.anyKey)
 				{
 					operacion.allowSceneActivation = true;
