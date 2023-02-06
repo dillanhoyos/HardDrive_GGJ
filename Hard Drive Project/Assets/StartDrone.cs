@@ -18,7 +18,7 @@ public class StartDrone : MonoBehaviour
         drone.SendBang("Reverse");
     }
      
-     void OnDisable()
+     public void Stop()
      {
          drone.SendBang("Reverse");
      }

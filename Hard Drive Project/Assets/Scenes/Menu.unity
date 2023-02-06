@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8738db3b0e7a24c46b41d082a47695a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drone: {fileID: 0}
+  drone: {fileID: 153284018}
 --- !u!114 &153284018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ AudioSource:
   m_GameObject: {fileID: 1428914520}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6081591404567198723, guid: 8e407b2deab26f14ba84708d5f08d1c6, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -902,10 +902,14 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6881794dda142b8488a5efba448ea8d7, type: 3}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
@@ -917,7 +921,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1964495048}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 153284017}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
@@ -925,11 +937,23 @@ PrefabInstance:
       value: Sonar
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SonarBoton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: StartDrone, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969335607329497812, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6969335607329497817, guid: 68ec0dea43caa694d9aae89f5462cbcf, type: 3}
