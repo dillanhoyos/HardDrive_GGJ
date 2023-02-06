@@ -13,7 +13,7 @@ public class BaldosaRota : MonoBehaviour {
     void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag=="Player") {
             Invoke("ActivarCaida",3f);
-            Invoke("DestruirBaldosa",3f);
+            Invoke("DestruirBaldosa",1f);
         }
     }
 
