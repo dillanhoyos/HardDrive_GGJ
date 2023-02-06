@@ -12,7 +12,6 @@ public class Baldosa : MonoBehaviour {
 
     void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag=="Player") {
-
             baldosaAnimator.SetTrigger("ActivarBaldosa");
         }
     }
